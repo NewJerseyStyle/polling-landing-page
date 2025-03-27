@@ -6,7 +6,7 @@
 </head>
 <body>
   <h1>Welcome</h1>
-  <p><a href="/form.html">Start Form</a></p>
+  <div class='polis' data-conversation_id='8bxccbnjbs'></div>
   <p><a href="#" id="resetLink">Reset Session</a></p>  <script>
     // Generate or retrieve session ID
     let sessionId = localStorage.getItem('sessionId') || crypto.randomUUID();
@@ -20,5 +20,6 @@
       window.location.href = '/index.html'; // Reload homepage
     });
   </script>
+  <script async src='https://pol.is/embed.js'></script>
 </body>
 </html>
