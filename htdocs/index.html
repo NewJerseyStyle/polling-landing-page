@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Homepage</title>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <p><a href="/form.html">Start Form</a></p>
+  <p><a href="#" id="resetLink">Reset Session</a></p>  <script>
+    // Generate or retrieve session ID
+    let sessionId = localStorage.getItem('sessionId') || crypto.randomUUID();
+    localStorage.setItem('sessionId', sessionId); // Store it    document.getElementById('resetLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      // Reset session
+      sessionId = crypto.randomUUID(); // New session ID
+      localStorage.setItem('sessionId', sessionId); // Update storage
+      localStorage.removeItem('formData'); // Clear any stored form data (optional)
+      alert('Session reset. Ready for a new user.');
+      window.location.href = '/index.html'; // Reload homepage
+    });
+  </script>
+</body>
+</html>
