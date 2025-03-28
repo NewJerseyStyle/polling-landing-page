@@ -17,7 +17,7 @@
       localStorage.setItem('sessionId', sessionId); // Update storage
       localStorage.removeItem('formData'); // Clear any stored form data (optional)
       alert('Session reset. Ready for a new user.');
-      window.location.href = '/index.html'; // Reload homepage
+      location.reload(true);
     });
   </script>
   <script async src='https://pol.is/embed.js'></script>
